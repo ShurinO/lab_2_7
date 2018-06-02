@@ -41,6 +41,12 @@ public class Monitor extends Device {
     }
 
     @Override
+    public int hashCode() {
+
+        return Objects.hash(super.hashCode(), resolutionX, resolutionY);
+    }
+
+    @Override
     public String toString() {
         return "Monitor: " +
                 "manufacturer=" + getManufacturer() +

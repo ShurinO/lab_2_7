@@ -16,12 +16,19 @@ public class Device {
     }
 
     @Override
+    public int hashCode() {
+
+        return Objects.hash(manufacturer, price, serialNumber);
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Device device = (Device) o;
         return Double.compare(device.price, price) == 0 &&
                 Objects.equals(manufacturer, device.manufacturer) &&
+
                 Objects.equals(serialNumber, device.serialNumber);
     }
 
