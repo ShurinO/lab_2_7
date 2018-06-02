@@ -5,6 +5,14 @@ public class Device {
     private double price;
     private String serialNumber;
 
+    @Override
+    public String toString() {
+        return "Device: " +
+                "manufacturer=" + manufacturer +
+                ", price=" + price +
+                ", serialNumber=" + serialNumber;
+    }
+
     public String getManufacturer() {
         return manufacturer;
     }

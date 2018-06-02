@@ -4,6 +4,7 @@ public class Monitor extends Device {
     private int resolutionX;
     private int resolutionY;
 
+
     public int getResolutionX() {
         return resolutionX;
     }
@@ -25,5 +26,15 @@ public class Monitor extends Device {
         super(manufacturer, price, serialNumber);
         this.resolutionX = resolutionX;
         this.resolutionY = resolutionY;
+    }
+
+    @Override
+    public String toString() {
+        return "Monitor: " +
+                "manufacturer=" + getManufacturer() +
+                ", price=" + getPrice() +
+                ", serialNumber=" + getSerialNumber()+
+                ", X="+resolutionX+
+                ", Y="+resolutionY;
     }
 }

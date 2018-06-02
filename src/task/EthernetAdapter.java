@@ -26,4 +26,14 @@ public class EthernetAdapter extends Device {
         this.speed = speed;
         this.mac = mac;
     }
+
+    @Override
+    public String toString() {
+        return "Ethernet Adapter: " +
+                "manufacturer=" + getManufacturer() +
+                ", price=" + getPrice() +
+                ", serialNumber=" + getSerialNumber()+
+                ", speed="+speed+
+                ", mac="+mac;
+    }
 }
