@@ -6,6 +6,7 @@ import task.Monitor;
 
 public class Main {
     public static void main(String[] args) {
+        // All types are Device
         Device device = new Device("Samsung",560,"AR34556F6GH");
         Device monitor = new Monitor("LG",450,"LG32P45GTR89T",1920,1080);
         Device ethernetAdapter = new EthernetAdapter("Pro-Link",110,"PL3456270SB",100,"aret45:fgrtt:456dg:67hhku");
