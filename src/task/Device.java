@@ -1,5 +1,7 @@
 package task;
 
+import java.util.Objects;
+
 public class Device {
     private String manufacturer;
     private double price;
@@ -13,8 +15,19 @@ public class Device {
                 ", serialNumber=" + serialNumber;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Device device = (Device) o;
+        return Double.compare(device.price, price) == 0 &&
+                Objects.equals(manufacturer, device.manufacturer) &&
+                Objects.equals(serialNumber, device.serialNumber);
+    }
+
     public String getManufacturer() {
         return manufacturer;
+
     }
 
     public void setManufacturer(String manufacturer) {
